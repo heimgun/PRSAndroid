@@ -7,39 +7,49 @@
     android:layout_height="match_parent"
     tools:context=".CreateUser">
 
+
     <TextView
         android:id="@+id/UsernnameLogin"
         android:layout_width="154dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginLeft="116dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="141dp"
-        android:layout_marginRight="141dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="50dp"
         android:text="@string/Username_txt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordLogin"
-        app:layout_constraintVertical_bias="0.68" />
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="187dp" />
+
+
+    <EditText
+        android:id="@+id/UsernameEdit"
+        android:layout_width="155dp"
+        android:layout_height="50dp"
+        android:inputType="text"
+        android:text="@string/Edit_txt"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="237dp" />
 
     <TextView
         android:id="@+id/PasswordLogin"
         android:layout_width="154dp"
         android:layout_height="47dp"
-        android:layout_marginStart="117dp"
-        android:layout_marginLeft="117dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginRight="140dp"
-        android:layout_marginBottom="10dp"
         android:text="@string/Password_txt"
-        app:layout_constraintBottom_toTopOf="@+id/UsernnameLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="296dp" />
+
+    <EditText
+        android:id="@+id/PasswordEdit"
+        android:layout_width="154dp"
+        android:layout_height="36dp"
+        android:inputType="textPassword"
+        android:text="@string/Edit_txt"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <Button
+        android:id="@+id/LogIn4Real"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LoginButton"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="401dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

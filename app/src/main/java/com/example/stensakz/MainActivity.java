@@ -9,6 +9,10 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    //TODO:
+    // 1. Add Classes + XML-files
+    // 2.
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -6,5 +6,6 @@
     <string name="Password_txt">Password:</string>
     <string name="Email_txt">E-mail:</string>
     <string name="Profilepicture_txt">Upload Profilepicture:</string>
+    <string name="Edit_txt">Write here</string>
 
 </resources>
