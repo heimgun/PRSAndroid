@@ -17,7 +17,7 @@
         android:layout_marginEnd="257dp"
         android:layout_marginRight="257dp"
         android:layout_marginBottom="10dp"
-        android:text="TextView"
+        android:text="@string/Username_txt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
