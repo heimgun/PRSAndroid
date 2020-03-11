@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Stensakz</string>
+    <string name="LoginButton">Log In</string>
+    <string name="CreateUserButton">Create User</string>
+    <string name="Username_txt">Username:</string>
+    <string name="Password_txt">Password:</string>
+    <string name="Email_txt">E-mail:</string>
+    <string name="Profilepicture_txt">Upload Profilepicture:</string>
+
+</resources>
