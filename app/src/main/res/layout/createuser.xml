@@ -8,42 +8,157 @@
         tools:context=".CreateUser">
 
     <TextView
-        android:id="@+id/UsernnameLogin"
+        android:id="@+id/UsernnameLoginTW"
         android:layout_width="154dp"
         android:layout_height="47dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="162dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="13dp"
         android:text="@string/Username_txt"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="162dp" />
+        app:layout_constraintBottom_toTopOf="@+id/PasswordLoginTW"
+        app:layout_constraintEnd_toStartOf="@+id/CUEditUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/UsernnameLogin"
-        android:layout_width="154dp"
-        android:layout_height="47dp"
-        android:text="@string/Password_txt"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="222dp" />
-
-    <TextView
-        android:id="@+id/UsernnameLogin"
-        android:layout_width="154dp"
-        android:layout_height="47dp"
-        android:text="@string/Email_txt"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="282dp" />
-
-    <TextView
-        android:id="@+id/UsernnameLogin"
-        android:layout_width="154dp"
-        android:layout_height="47dp"
-        android:text="@string/Profilepicture_txt"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="342dp" />
-
-    <Button
+    <EditText
+        android:id="@+id/CUEditUsername"
+        android:autofillHints="@string/Username_txt"
+        android:hint="@string/Username_txt"
+        android:inputType="text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="162dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/Writehere"
+        app:layout_constraintBottom_toTopOf="@+id/CUEditpassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/UsernnameLoginTW"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/PasswordLoginTW"
+        android:layout_width="154dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/Password_txt"
+        app:layout_constraintBottom_toTopOf="@+id/EmailLoginTW"
+        app:layout_constraintEnd_toStartOf="@+id/CUEditpassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UsernnameLoginTW" />
+
+    <EditText
+        android:id="@+id/CUEditpassword"
+        android:autofillHints="@string/Password_txt"
+        android:hint="@string/Password_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginRight="136dp"
+        android:layout_marginBottom="17dp"
+        android:inputType="textPassword"
+        android:text="@string/Writehere"
+        app:layout_constraintBottom_toTopOf="@+id/CUEditEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PasswordLoginTW"
+        app:layout_constraintTop_toBottomOf="@+id/CUEditUsername" />
+
+    <TextView
+        android:id="@+id/EmailLoginTW"
+        android:layout_width="154dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="7dp"
+        android:text="@string/Email_txt"
+        app:layout_constraintBottom_toTopOf="@+id/UsernnameLogin"
+        app:layout_constraintEnd_toStartOf="@+id/CUEditEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordLoginTW" />
+
+
+    <EditText
+        android:id="@+id/CUEditEmail"
+        android:autofillHints="@string/Email_txt"
+        android:hint="@string/Email_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:layout_marginBottom="402dp"
+        android:inputType="textEmailAddress"
+        android:text="@string/Writehere"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EmailLoginTW"
+        app:layout_constraintTop_toBottomOf="@+id/CUEditpassword" />
+
+    <TextView
+        android:id="@+id/UsernnameLogin"
+        android:layout_width="154dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="227dp"
+        android:layout_marginRight="227dp"
+        android:layout_marginBottom="47dp"
+        android:text="@string/Profilepicture_txt"
+        app:layout_constraintBottom_toTopOf="@+id/CUBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailLoginTW" />
+
+    <Button
+        android:id="@+id/CUBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="277dp"
+        android:layout_marginRight="277dp"
+        android:layout_marginBottom="34dp"
         android:text="@string/LoginButton"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="436dp" />
+        app:layout_constraintBottom_toTopOf="@+id/UsernameEmpty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UsernnameLogin" />
+
+    <TextView
+        android:id="@+id/UsernameEmpty"
+        android:layout_width="154dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="227dp"
+        android:layout_marginRight="227dp"
+        android:layout_marginBottom="160dp"
+        android:text="@string/UsernameEmpty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CUBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

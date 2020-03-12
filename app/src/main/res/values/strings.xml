@@ -7,5 +7,7 @@
     <string name="Email_txt">E-mail:</string>
     <string name="Profilepicture_txt">Upload Profilepicture:</string>
     <string name="Edit_txt">Write here</string>
+    <string name="UsernameEmpty">Please enter a username</string>
+    <string name="Writehere">Type Here</string>
 
 </resources>
