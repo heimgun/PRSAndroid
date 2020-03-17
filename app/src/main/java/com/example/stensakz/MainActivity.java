@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         //Buttons
         Button CreateUserBtn = (Button) findViewById(R.id.CreateUserBtn);
         Button LogInBtn = (Button) findViewById(R.id.LogInBtn);
+
 
 
         //OnClickListeners

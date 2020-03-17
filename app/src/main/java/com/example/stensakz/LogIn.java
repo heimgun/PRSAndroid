@@ -31,6 +31,7 @@ public class LogIn extends AppCompatActivity {
     PreparedStatement ps;
 
 
+
     @Override
     public void onCreate(Bundle SavedInstanceState) {
         super.onCreate(SavedInstanceState);
@@ -62,7 +63,7 @@ public class LogIn extends AppCompatActivity {
                 String password = passwordEdit.getText().toString();
 
                 try{
-                    ps = connection.prepareStatement("SELECT * FROM \"gamedb.users\" WHERE \"username\" = \"?\" AND \"password\" = \"?\"");
+                    ps = connection.prepareStatement("SELECT * FROM \"gamedb.users\" WHERE \"username\" = '?' AND \"password\" = '?';");
                     ps.setString(1, username);
                     ps.setString(2, password);
                     ResultSet validUser = ps.executeQuery();
