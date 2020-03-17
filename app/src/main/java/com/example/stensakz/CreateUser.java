@@ -16,6 +16,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+
+
 public class CreateUser extends AppCompatActivity {
 
     //TODO:
@@ -27,8 +29,8 @@ public class CreateUser extends AppCompatActivity {
     Button CUBtn;
     EditText CUusername, CUpassword, CUemail;
     TextView emptyTV;
-    Connection connectionCU = null;
-    PreparedStatement psCU = null;
+    Connection connectionCU;
+    PreparedStatement psCU;
 
 
 
@@ -47,7 +49,7 @@ public class CreateUser extends AppCompatActivity {
         emptyTV = (TextView) findViewById(R.id.UsernameEmpty);
 
 
-        //Connection
+        //Driver
 
 
 
@@ -86,33 +88,34 @@ public class CreateUser extends AppCompatActivity {
 
     public void InsertIntoDB(String username, String password, String email){
 
+
+        connectionCU = null;
+        psCU = null;
+
+
         try{
-            Class.forName("org.postgresql.Driver");
+
             connectionCU = DriverManager.getConnection("jdbc:postgresql://ec2-176-34-97-213.eu-west-1.compute.amazonaws.com:5432/d2621gbprb812i", "igblmsacvvtqrc", "8aa6d775c64cc09d4e2aee35743c2ed90290530663b15d687f0e4bfff5542a68");
 
-
-        } catch (Exception e){e.printStackTrace();}
-
-        try{
-
-            psCU = connectionCU.prepareStatement("insert into \"gamedb.users\" (\"username\", \"password\", \"email\") values (?, ?, ?)");
+            psCU = connectionCU.prepareStatement("insert into \"gamedb.users\" (\"username\", \"password\", \"email\") values ('?', '?', '?')");
             psCU.setString(1, username);
             psCU.setString(2, password);
             psCU.setString(3, email);
             psCU.executeUpdate();
+            connectionCU.commit();
             psCU.close();
-            connectionCU.close();
-
 
 
 
         } catch (SQLException e) {
-            emptyTV.setText("Wrong with db");
+            e.printStackTrace();
         }
 
 
 
     }
+
+
 
 
 }

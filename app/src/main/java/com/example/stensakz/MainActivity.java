@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     // 1. Add Classes + XML-files
     // 2.
 
-    Connection connection;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
