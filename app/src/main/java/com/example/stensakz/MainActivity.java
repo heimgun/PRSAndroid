@@ -7,16 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.sql.Connection;
+
 public class MainActivity extends AppCompatActivity {
 
     //TODO:
     // 1. Add Classes + XML-files
     // 2.
 
+    Connection connection;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
 
         //Buttons

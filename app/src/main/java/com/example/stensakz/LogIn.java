@@ -21,6 +21,9 @@ public class LogIn extends AppCompatActivity {
     // 1. Get Connection to DB
     // 2. onClickListener
 
+    EditText usernameEdit, passwordEdit;
+    Button loginBtn, createUserBtn;
+
 
     @Override
     public void onCreate(Bundle SavedInstanceState) {
@@ -28,11 +31,9 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.login);
 
         //XML-objects
-        EditText UsernameEdit = (EditText) findViewById(R.id.UsernameEdit);
-        EditText PasswordEdit = (EditText) findViewById(R.id.PasswordEdit);
-        Button LoginBtn = (Button) findViewById(R.id.LogIn4Real);
-
-        Scanner sc = new Scanner(System.in);
+        usernameEdit = (EditText) findViewById(R.id.UsernameEdit);
+        passwordEdit = (EditText) findViewById(R.id.PasswordEdit);
+        loginBtn = (Button) findViewById(R.id.LogIn4Real);
 
 
 
