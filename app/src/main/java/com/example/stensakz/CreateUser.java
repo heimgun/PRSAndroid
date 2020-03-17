@@ -18,6 +18,10 @@ public class CreateUser extends AppCompatActivity {
     // 2. Create safe password-storage with hash and salt
 
 
+    Button CUBtn;
+    EditText CUusername, CUpassword, CUemail;
+    TextView emptyTV;
+
 
     @Override
     public void onCreate(Bundle SavedInstanceState){
@@ -26,27 +30,39 @@ public class CreateUser extends AppCompatActivity {
 
 
         //XML-objects
-        Button CUBtn = (Button) findViewById(R.id.CUBtn);
-        final EditText CUusername = (EditText) findViewById(R.id.CUEditUsername);
-        final EditText CUpassword = (EditText) findViewById(R.id.CUEditpassword);
-        final EditText CUemail = (EditText) findViewById(R.id.CUEditEmail);
-        final TextView usernameEmpty = (TextView) findViewById(R.id.UsernameEmpty);
-        usernameEmpty.setVisibility(View.INVISIBLE);
+        CUBtn = (Button) findViewById(R.id.CUBtn);
+        CUusername = (EditText) findViewById(R.id.CUEditUsername);
+        CUpassword = (EditText) findViewById(R.id.CUEditpassword);
+        CUemail = (EditText) findViewById(R.id.CUEditEmail);
+        emptyTV = (TextView) findViewById(R.id.UsernameEmpty);
+
+
+
 
 
         //Methods
         CUBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (CUusername.getText().toString() != null && CUpassword.getText().toString() != null && CUemail.getText().toString() != null){
+
+                final String username = CUusername.getText().toString();
+                final String password = CUpassword.getText().toString();
+                final String email = CUemail.getText().toString();
+                emptyTV.getText().toString();
+
+
+
+                 if (username.equals("") || password.equals("") || email.equals("")){
+
+                    emptyTV.setText("Please fill all spaces");
 
                 }
 
-                else if (CUusername.getText().toString() == null){
+                else {
 
-                    usernameEmpty.setVisibility(View.VISIBLE);
-
+                    emptyTV.setText("Create User");
                 }
+
             }
         });
 
