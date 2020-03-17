@@ -12,7 +12,11 @@ public class StartGame extends AppCompatActivity {
         super.onCreate(SavedInstance);
         setContentView(R.layout.startgame);
 
-
+        /* TODO
+            1. Menu for robot/friend
+            2. Class for robot
+            3. Gameplan
+         */
 
 
     }

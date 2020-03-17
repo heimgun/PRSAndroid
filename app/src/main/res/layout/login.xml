@@ -27,7 +27,7 @@
     <EditText
         android:id="@+id/UsernameEdit"
         android:autofillHints="@string/Username_txt"
-        android:hint="@string/Username_txt"
+        android:hint="@string/Writehere"
         android:layout_width="155dp"
         android:layout_height="50dp"
         android:layout_marginStart="119dp"
@@ -36,7 +36,6 @@
         android:layout_marginRight="137dp"
         android:layout_marginBottom="9dp"
         android:inputType="text"
-        android:text="@string/Edit_txt"
         app:layout_constraintBottom_toTopOf="@+id/PasswordLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +59,7 @@
     <EditText
         android:id="@+id/PasswordEdit"
         android:autofillHints="@string/Password_txt"
-        android:hint="@string/Password_txt"
+        android:hint="@string/Writehere"
         android:layout_width="154dp"
         android:layout_height="36dp"
         android:layout_marginStart="120dp"
@@ -69,7 +68,6 @@
         android:layout_marginRight="137dp"
         android:layout_marginBottom="13dp"
         android:inputType="textPassword"
-        android:text="@string/Edit_txt"
         app:layout_constraintBottom_toTopOf="@+id/LogIn4Real"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +88,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PasswordEdit" />
+
+    <TextView
+        android:id="@+id/UsernameEmpty"
+        android:layout_width="154dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="227dp"
+        android:layout_marginRight="227dp"
+        android:layout_marginBottom="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CUBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -79,11 +79,12 @@ public class CreateUser extends AppCompatActivity {
 
 
                     try {
-                        ps = connection.prepareStatement("INSERT INTO \"users\" (\"username\", \"password\", \"email\") VALUES (\"?\", \"?\", \"?\")");
+                        ps = connection.prepareStatement("INSERT INTO \"gamedb.users\" (\"username\", \"password\", \"email\") VALUES (\"?\", \"?\", \"?\")");
                         ps.setString(1, username);
                         ps.setString(2, password);
                         ps.setString(3, email);
                         ps.executeQuery();
+                        ps.close();
 
                         startActivity(new Intent(CreateUser.this, StartGame.class));
 
