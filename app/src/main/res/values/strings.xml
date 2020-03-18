@@ -1,14 +1,7 @@
 <resources>
     <string name="app_name">Stensakz</string>
-    <string name="LoginButton">Log In</string>
-    <string name="CreateUserButton">Create User</string>
-    <string name="Username_txt">Username:</string>
-    <string name="Password_txt">Password:</string>
-    <string name="Email_txt">E-mail:</string>
-    <string name="Profilepicture_txt">Upload Profilepicture:</string>
-    <string name="Edit_txt">Write here</string>
-    <string name="UsernameEmpty">Please enter a username</string>
-    <string name="Writehere">Type Here</string>
+    <string name="StartgameBtn">Start Game</string>
+    <string name="RulesBtn">Rules</string>
     <string name="Rock">Rock</string>
     <string name="Paper">Paper</string>
     <string name="Scissor">Scissor</string>

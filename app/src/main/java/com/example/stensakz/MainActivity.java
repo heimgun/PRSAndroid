@@ -13,10 +13,13 @@ import java.sql.DriverManager;
 
 public class MainActivity extends AppCompatActivity {
 
-    //TODO:
-    // 1. Add Classes + XML-files
-    // 2.
 
+    /* TODO
+    *   1. GUI (Add background, set logo, font, buttons)
+    * */
+
+
+    Button startGameBtn, rulesBtn;
 
 
     @Override
@@ -27,23 +30,23 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Buttons
-        Button CreateUserBtn = (Button) findViewById(R.id.CreateUserBtn);
-        Button LogInBtn = (Button) findViewById(R.id.LogInBtn);
+        startGameBtn = (Button) findViewById(R.id.startGameBtn);
+        rulesBtn = (Button) findViewById(R.id.Rules);
 
 
 
         //OnClickListeners
-        CreateUserBtn.setOnClickListener(new View.OnClickListener() {
+        startGameBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CreateUser.class));
+                startActivity(new Intent(MainActivity.this, StartGame.class));
             }
         });
 
-        LogInBtn.setOnClickListener(new View.OnClickListener() {
+        rulesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LogIn.class));
+                startActivity(new Intent(MainActivity.this, Rules.class));
             }
         });
 

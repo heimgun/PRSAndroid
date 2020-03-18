@@ -18,13 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateUser"
+        <activity android:name=".StartGame"
             android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".LogIn"
-            android:parentActivityName=".MainActivity">
-    </activity>
-        <activity android:name=".StartGame"
+        <activity android:name=".Rules"
             android:parentActivityName=".MainActivity">
         </activity>
     </application>

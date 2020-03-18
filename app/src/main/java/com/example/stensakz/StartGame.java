@@ -14,6 +14,11 @@ import java.util.Random;
 public class StartGame extends AppCompatActivity {
 
 
+     /* TODO
+            1. GUI (Add Icons, vy-er for win, loose, tie)
+         */
+
+
     Random generator = new Random();
     Button rockBtn, paperBtn, scissorBtn, reStartBtn;
     RPS computerPlay, playerPlay;
@@ -28,10 +33,7 @@ public class StartGame extends AppCompatActivity {
         super.onCreate(SavedInstance);
         setContentView(R.layout.startgame);
 
-        /* TODO
-            1. BEATS
-            2. GUI
-         */
+
 
         rockBtn = (Button) findViewById(R.id.Rock);
         paperBtn = (Button) findViewById(R.id.Paper);
