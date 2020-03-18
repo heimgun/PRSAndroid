@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/CL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/Rock"
@@ -21,6 +23,17 @@
         android:layout_height="wrap_content"
         android:text="@string/Scissor" />
 
+
+    <TextView
+        android:id="@+id/GameTV"
+        android:layout_width="270dp"
+        android:layout_height="61dp" />
+
+    <Button
+        android:id="@+id/Restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart" />
 
 
 </LinearLayout>
