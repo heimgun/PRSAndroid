@@ -94,7 +94,7 @@ public class CreateUser extends AppCompatActivity {
 
 
         try{
-
+            Class.forName("org.postgresql.Driver");
             connectionCU = DriverManager.getConnection("jdbc:postgresql://ec2-176-34-97-213.eu-west-1.compute.amazonaws.com:5432/d2621gbprb812i", "igblmsacvvtqrc", "8aa6d775c64cc09d4e2aee35743c2ed90290530663b15d687f0e4bfff5542a68");
 
             psCU = connectionCU.prepareStatement("insert into \"gamedb.users\" (\"username\", \"password\", \"email\") values ('?', '?', '?')");
@@ -109,8 +109,9 @@ public class CreateUser extends AppCompatActivity {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
-
 
 
     }
