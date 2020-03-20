@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,9 @@ public class StartGame extends AppCompatActivity {
 
      /* TODO
             1. GUI (Add Icons, vy-er for win, loose, tie)
+            2. ImageButtons
+            3. computerPlay "screen"
+            4. Congrats-message popup
          */
 
 
@@ -23,8 +27,7 @@ public class StartGame extends AppCompatActivity {
     Button rockBtn, paperBtn, scissorBtn, reStartBtn;
     RPS computerPlay, playerPlay;
     TextView gameTV;
-
-
+    RelativeLayout cpGame;
 
 
 
@@ -40,12 +43,17 @@ public class StartGame extends AppCompatActivity {
         scissorBtn = (Button) findViewById(R.id.Scissor);
         reStartBtn = (Button) findViewById(R.id.Restart);
         gameTV = (TextView) findViewById(R.id.GameTV);
+        cpGame = (RelativeLayout) findViewById(R.id.RLcomputerChoice);
+
+        cpGame.setVisibility(View.INVISIBLE);
 
 
         rockBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                paperBtn.setVisibility(View.INVISIBLE);
+                scissorBtn.setVisibility(View.INVISIBLE);
                 playerPlay = RPS.ROCK;
                 cpGenerator();
                 gameTV.getText().toString();
@@ -77,6 +85,8 @@ public class StartGame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                rockBtn.setVisibility(View.INVISIBLE);
+                scissorBtn.setVisibility(View.INVISIBLE);
                 playerPlay = RPS.PAPER;
                 cpGenerator();
                 gameTV.getText().toString();
@@ -108,6 +118,8 @@ public class StartGame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                rockBtn.setVisibility(View.INVISIBLE);
+                paperBtn.setVisibility(View.INVISIBLE);
                 playerPlay = RPS.SCISSORS;
                 cpGenerator();
 

@@ -5,5 +5,9 @@
     <string name="Rock">Rock</string>
     <string name="Paper">Paper</string>
     <string name="Scissor">Scissor</string>
+    <string name="Restart">Restart</string>
+    <string name="CP">Artificial intelligence hits you with</string>
+
+    <string name="RulesTV">You know the drill peeps; the only thing that saves you from corona is toilet paper</string>
 
 </resources>

@@ -7,6 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Rules extends AppCompatActivity {
 
 
+        /* TODO:
+            1. Rules TV
+         */
+
 
         @Override
         protected void onCreate(Bundle SavedInstance){
