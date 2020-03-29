@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,12 +15,7 @@ import java.sql.DriverManager;
 public class MainActivity extends AppCompatActivity {
 
 
-    /* TODO
-    *   1. GUI (Add background, set logo, font, buttons)
-    * */
-
-
-    Button startGameBtn, rulesBtn;
+    ImageButton startGameBtn, rulesBtn;
 
 
     @Override
@@ -30,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Buttons
-        startGameBtn = (Button) findViewById(R.id.startGameBtn);
-        rulesBtn = (Button) findViewById(R.id.Rules);
+        startGameBtn = (ImageButton) findViewById(R.id.startGameBtn);
+        rulesBtn = (ImageButton) findViewById(R.id.Rules);
 
 
 

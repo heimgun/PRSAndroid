@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CLSG"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    tools:context=".Rules">
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="338dp"
+        android:layout_height="445dp"
+        android:src="@drawable/ruleslogo"
+        app:layout_constraintBottom_toTopOf="@+id/startGameBtnRules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.652" />
+
+    <ImageButton
+        android:id="@+id/startGameBtnRules"
+        android:layout_width="155dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="72dp"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/startgamebutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

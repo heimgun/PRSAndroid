@@ -5,13 +5,14 @@
     android:id="@+id/CLSG"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="portrait"
     tools:context=".StartGame">
 
 
     <RelativeLayout
         android:id="@+id/RLcomputerChoice"
-        android:layout_width="409dp"
-        android:layout_height="262dp"
+        android:layout_width="526dp"
+        android:layout_height="649dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,91 +21,80 @@
             android:id="@+id/computerTV"
             android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:text="@string/CP"
             android:gravity="center"
             />
 
         <ImageView
             android:id="@+id/computerChoiceIMG"
-            android:layout_width="124dp"
-            android:layout_height="85dp"
+            android:layout_width="411dp"
+            android:layout_height="516dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="138dp"
-            android:layout_marginLeft="138dp"
-            android:layout_marginBottom="74dp" />
+            android:layout_marginStart="57dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginBottom="50dp"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:scaleType="fitCenter" />
 
 
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/RLplayerChoice"
-        android:layout_width="413dp"
-        android:layout_height="234dp"
+        android:id="@+id/PlayerChoice"
+        android:layout_width="411dp"
+        android:layout_height="530dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/GameTV"
-            android:layout_width="270dp"
-            android:layout_height="61dp"
-            android:gravity="center"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="66dp"
-            android:layout_marginLeft="66dp"
-            android:layout_marginBottom="80dp" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Scissor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="178dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="53dp"
-            android:layout_marginLeft="53dp"
-            android:layout_marginTop="31dp"
-            android:text="@string/Scissor" />
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="210dp"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/humanlogo" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Paper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="123dp"
+            android:layout_height="145dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="66dp"
-            android:layout_marginRight="66dp"
-            android:text="@string/Paper" />
+            android:layout_marginTop="229dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/paperlogo" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Rock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="146dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="157dp"
-            android:layout_marginLeft="157dp"
-            android:layout_marginTop="31dp"
-            android:text="@string/Rock" />
+            android:layout_marginStart="140dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="32dp"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/covidlogo" />
 
-        <Button
-            android:id="@+id/Restart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="155dp"
-            android:layout_marginLeft="155dp"
-            android:layout_marginBottom="25dp"
-            android:text="@string/Restart" />
 
     </RelativeLayout>
 

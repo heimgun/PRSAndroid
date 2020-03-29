@@ -1,9 +1,11 @@
 package com.example.stensakz;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
+import android.widget.ImageButton;
+import android.widget.ImageView;
+
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -15,68 +17,72 @@ import java.util.Random;
 public class StartGame extends AppCompatActivity {
 
 
-     /* TODO
-            1. GUI (Add Icons, vy-er for win, loose, tie)
-            2. ImageButtons
-            3. computerPlay "screen"
-            4. Congrats-message popup
-         */
-
 
     Random generator = new Random();
-    Button rockBtn, paperBtn, scissorBtn, reStartBtn;
+    ImageButton rockBtn, paperBtn, scissorBtn;
+    ImageView computerMove;
     RPS computerPlay, playerPlay;
     TextView gameTV;
-    RelativeLayout cpGame;
+    RelativeLayout cpGame, plGame;
 
 
 
     @Override
-    public void onCreate(Bundle SavedInstance){
+    public void onCreate(Bundle SavedInstance) {
         super.onCreate(SavedInstance);
         setContentView(R.layout.startgame);
 
 
+        rockBtn = (ImageButton) findViewById(R.id.Rock);
+        paperBtn = (ImageButton) findViewById(R.id.Paper);
+        scissorBtn = (ImageButton) findViewById(R.id.Scissor);
+        computerMove = (ImageView) findViewById(R.id.computerChoiceIMG);
 
-        rockBtn = (Button) findViewById(R.id.Rock);
-        paperBtn = (Button) findViewById(R.id.Paper);
-        scissorBtn = (Button) findViewById(R.id.Scissor);
-        reStartBtn = (Button) findViewById(R.id.Restart);
-        gameTV = (TextView) findViewById(R.id.GameTV);
+        gameTV = (TextView) findViewById(R.id.computerTV);
+
         cpGame = (RelativeLayout) findViewById(R.id.RLcomputerChoice);
+        plGame = (RelativeLayout) findViewById(R.id.PlayerChoice);
 
         cpGame.setVisibility(View.INVISIBLE);
+        plGame.setVisibility(View.VISIBLE);
+
+        cpGenerator();
 
 
         rockBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                paperBtn.setVisibility(View.INVISIBLE);
-                scissorBtn.setVisibility(View.INVISIBLE);
                 playerPlay = RPS.ROCK;
-                cpGenerator();
-                gameTV.getText().toString();
 
-                if (playerPlay.beats(computerPlay)){
 
+                 if (playerPlay.beats(computerPlay)) {
+
+                    plGame.setVisibility(View.INVISIBLE);
                     gameTV.setText("You win");
+                    computerMove.setImageResource(R.drawable.covidwon);
+                    cpGame.setVisibility(View.VISIBLE);
 
 
-                }
 
-                else if (computerPlay.beats(playerPlay)){
+                 } else if (computerPlay.beats(playerPlay)) {
 
-                    gameTV.setText("Computer win");
-                }
+                    plGame.setVisibility(View.INVISIBLE);
+                    gameTV.setText("You loose");
+                    computerMove.setImageResource(R.drawable.paperwon);
+                    cpGame.setVisibility(View.VISIBLE);
 
-                else if (computerPlay.equals(playerPlay)){
 
-                    gameTV.setText("TIE");
 
-                }
+                 } else if (computerPlay.equals(playerPlay)) {
 
-                return;
+                    plGame.setVisibility(View.INVISIBLE);
+                    gameTV.setText("Tie");
+                    cpGame.setVisibility(View.VISIBLE);
+
+
+                 }
+
 
             }
         });
@@ -85,31 +91,37 @@ public class StartGame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                rockBtn.setVisibility(View.INVISIBLE);
-                scissorBtn.setVisibility(View.INVISIBLE);
+
                 playerPlay = RPS.PAPER;
-                cpGenerator();
-                gameTV.getText().toString();
 
-                if (playerPlay.beats(computerPlay)){
 
+
+                if (playerPlay.beats(computerPlay)) {
+
+                    plGame.setVisibility(View.INVISIBLE);
                     gameTV.setText("You win");
+                    computerMove.setImageResource(R.drawable.paperwon);
+                    cpGame.setVisibility(View.VISIBLE);
+
+
+
+                } else if (computerPlay.beats(playerPlay)) {
+
+                    plGame.setVisibility(View.INVISIBLE);
+                    gameTV.setText("You loose");
+                    computerMove.setImageResource(R.drawable.handwon);
+                    cpGame.setVisibility(View.VISIBLE);
+
+
+                } else if (computerPlay.equals(playerPlay)) {
+
+                    plGame.setVisibility(View.INVISIBLE);
+                    gameTV.setText("Tie");
+                    cpGame.setVisibility(View.VISIBLE);
 
 
                 }
 
-                else if (computerPlay.beats(playerPlay)){
-
-                    gameTV.setText("Computer win");
-                }
-
-                else if (computerPlay.equals(playerPlay)){
-
-                    gameTV.setText("TIE");
-
-                }
-
-                return;
 
             }
         });
@@ -118,44 +130,45 @@ public class StartGame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                rockBtn.setVisibility(View.INVISIBLE);
-                paperBtn.setVisibility(View.INVISIBLE);
+
                 playerPlay = RPS.SCISSORS;
-                cpGenerator();
 
-                gameTV.getText().toString();
 
-                if (playerPlay.beats(computerPlay)){
+                if (playerPlay.beats(computerPlay)) {
 
-                    gameTV.setText("You win");
+                    plGame.setVisibility(View.INVISIBLE);
+                    gameTV.setText("You Win");
+                    computerMove.setImageResource(R.drawable.handwon);
+                    cpGame.setVisibility(View.VISIBLE);
 
+
+                } else if (computerPlay.beats(playerPlay)) {
+
+                    plGame.setVisibility(View.INVISIBLE);
+                    gameTV.setText("You loose");
+                    computerMove.setImageResource(R.drawable.covidwon);
+                    cpGame.setVisibility(View.VISIBLE);
+
+
+                } else if (computerPlay.equals(playerPlay)) {
+
+                    plGame.setVisibility(View.INVISIBLE);
+                    gameTV.setText("Tie");
+                    cpGame.setVisibility(View.VISIBLE);
 
                 }
-
-                else if (computerPlay.beats(playerPlay)){
-
-                    gameTV.setText("Computer win");
-                }
-
-                else if (computerPlay.equals(playerPlay)){
-
-                    gameTV.setText("TIE");
-
-                }
-
-                return;
 
             }
         });
 
 
 
-        reStartBtn.setOnClickListener(new View.OnClickListener() {
+       /* reStartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(StartGame.this, StartGame.class));
             }
-        });
+        }); */
 
 
     }
@@ -176,7 +189,6 @@ public class StartGame extends AppCompatActivity {
         else if (cp == 3){
             computerPlay = RPS.SCISSORS;
         }
-
 
 
     }
