@@ -1,8 +1,10 @@
 package com.example.stensakz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -19,11 +21,14 @@ public class StartGame extends AppCompatActivity {
 
 
     Random generator = new Random();
+    Button restartBtn;
     ImageButton rockBtn, paperBtn, scissorBtn;
     ImageView computerMove;
     RPS computerPlay, playerPlay;
-    TextView gameTV;
-    RelativeLayout cpGame, plGame;
+    TextView gameTV, resultTV;
+    RelativeLayout cpGame, plGame, restart;
+
+
 
 
 
@@ -33,18 +38,24 @@ public class StartGame extends AppCompatActivity {
         setContentView(R.layout.startgame);
 
 
+        restartBtn = (Button) findViewById(R.id.restartBtn);
+
         rockBtn = (ImageButton) findViewById(R.id.Rock);
         paperBtn = (ImageButton) findViewById(R.id.Paper);
         scissorBtn = (ImageButton) findViewById(R.id.Scissor);
         computerMove = (ImageView) findViewById(R.id.computerChoiceIMG);
 
+        resultTV = (TextView) findViewById(R.id.whatBWhat);
         gameTV = (TextView) findViewById(R.id.computerTV);
 
         cpGame = (RelativeLayout) findViewById(R.id.RLcomputerChoice);
         plGame = (RelativeLayout) findViewById(R.id.PlayerChoice);
+        restart = (RelativeLayout) findViewById(R.id.restart);
 
-        cpGame.setVisibility(View.INVISIBLE);
+
+        cpGame.setVisibility(View.VISIBLE);
         plGame.setVisibility(View.VISIBLE);
+        restart.setVisibility(View.INVISIBLE);
 
         cpGenerator();
 
@@ -59,26 +70,28 @@ public class StartGame extends AppCompatActivity {
                  if (playerPlay.beats(computerPlay)) {
 
                     plGame.setVisibility(View.INVISIBLE);
-                    gameTV.setText("You win");
+                    gameTV.setText(R.string.Win);
+                    resultTV.setText(R.string.cBh);
                     computerMove.setImageResource(R.drawable.covidwon);
-                    cpGame.setVisibility(View.VISIBLE);
+                    restart.setVisibility(View.VISIBLE);
 
 
 
                  } else if (computerPlay.beats(playerPlay)) {
 
                     plGame.setVisibility(View.INVISIBLE);
-                    gameTV.setText("You loose");
+                    gameTV.setText(R.string.Loose);
+                    resultTV.setText(R.string.pBc);
                     computerMove.setImageResource(R.drawable.paperwon);
-                    cpGame.setVisibility(View.VISIBLE);
+                    restart.setVisibility(View.VISIBLE);
 
 
 
                  } else if (computerPlay.equals(playerPlay)) {
 
                     plGame.setVisibility(View.INVISIBLE);
-                    gameTV.setText("Tie");
-                    cpGame.setVisibility(View.VISIBLE);
+                    gameTV.setText(R.string.Tie);
+                    restart.setVisibility(View.VISIBLE);
 
 
                  }
@@ -99,25 +112,27 @@ public class StartGame extends AppCompatActivity {
                 if (playerPlay.beats(computerPlay)) {
 
                     plGame.setVisibility(View.INVISIBLE);
-                    gameTV.setText("You win");
+                    gameTV.setText(R.string.Win);
+                    resultTV.setText(R.string.pBc);
                     computerMove.setImageResource(R.drawable.paperwon);
-                    cpGame.setVisibility(View.VISIBLE);
+                    restart.setVisibility(View.VISIBLE);
 
 
 
                 } else if (computerPlay.beats(playerPlay)) {
 
                     plGame.setVisibility(View.INVISIBLE);
-                    gameTV.setText("You loose");
+                    gameTV.setText(R.string.Loose);
+                    resultTV.setText(R.string.hBp);
                     computerMove.setImageResource(R.drawable.handwon);
-                    cpGame.setVisibility(View.VISIBLE);
+                    restart.setVisibility(View.VISIBLE);
 
 
                 } else if (computerPlay.equals(playerPlay)) {
 
                     plGame.setVisibility(View.INVISIBLE);
-                    gameTV.setText("Tie");
-                    cpGame.setVisibility(View.VISIBLE);
+                    gameTV.setText(R.string.Tie);
+                    restart.setVisibility(View.VISIBLE);
 
 
                 }
@@ -137,24 +152,26 @@ public class StartGame extends AppCompatActivity {
                 if (playerPlay.beats(computerPlay)) {
 
                     plGame.setVisibility(View.INVISIBLE);
-                    gameTV.setText("You Win");
+                    gameTV.setText(R.string.Win);
+                    resultTV.setText(R.string.hBp);
                     computerMove.setImageResource(R.drawable.handwon);
-                    cpGame.setVisibility(View.VISIBLE);
+                    restart.setVisibility(View.VISIBLE);
 
 
                 } else if (computerPlay.beats(playerPlay)) {
 
                     plGame.setVisibility(View.INVISIBLE);
-                    gameTV.setText("You loose");
+                    gameTV.setText(R.string.Loose);
+                    resultTV.setText(R.string.cBh);
                     computerMove.setImageResource(R.drawable.covidwon);
-                    cpGame.setVisibility(View.VISIBLE);
+                    restart.setVisibility(View.VISIBLE);
 
 
                 } else if (computerPlay.equals(playerPlay)) {
 
                     plGame.setVisibility(View.INVISIBLE);
-                    gameTV.setText("Tie");
-                    cpGame.setVisibility(View.VISIBLE);
+                    gameTV.setText(R.string.Tie);
+                    restart.setVisibility(View.VISIBLE);
 
                 }
 
@@ -163,12 +180,12 @@ public class StartGame extends AppCompatActivity {
 
 
 
-       /* reStartBtn.setOnClickListener(new View.OnClickListener() {
+       restartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(StartGame.this, StartGame.class));
             }
-        }); */
+        });
 
 
     }

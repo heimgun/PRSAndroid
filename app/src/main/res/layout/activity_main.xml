@@ -10,20 +10,21 @@
 
     <ImageView
         android:id="@+id/logoImg"
-        android:layout_width="314dp"
-        android:layout_height="203dp"
+        android:layout_width="373dp"
+        android:layout_height="285dp"
         android:layout_marginTop="76dp"
         android:src="@drawable/rpslogo"
         app:layout_constraintBottom_toTopOf="@+id/startGameBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/startGameBtn"
-        android:layout_width="190dp"
-        android:layout_height="92dp"
+        android:layout_width="182dp"
+        android:layout_height="84dp"
         android:layout_marginStart="148dp"
         android:layout_marginLeft="148dp"
         android:layout_marginTop="355dp"
@@ -36,15 +37,16 @@
         android:src="@drawable/startgamebutton"
         app:layout_constraintBottom_toTopOf="@+id/Rules"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/Rules"
-        android:layout_width="170dp"
-        android:layout_height="73dp"
-        android:layout_marginBottom="156dp"
+        android:layout_width="161dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="124dp"
         android:padding="1dp"
         android:scaleType="fitCenter"
         android:src="@drawable/rulesbutton"

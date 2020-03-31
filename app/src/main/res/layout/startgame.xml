@@ -21,8 +21,28 @@
             android:id="@+id/computerTV"
             android:layout_width="match_parent"
             android:layout_height="58dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/arial"
             android:gravity="center"
-            />
+            android:padding="5dp"
+            android:text="@string/makeMove"
+            android:textColor="@color/colorText"
+            android:textSize="80px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/whatBWhat"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="66dp"
+            android:fontFamily="@font/arial"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/colorText"
+            android:textSize="70px"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/computerChoiceIMG"
@@ -94,6 +114,22 @@
             android:padding="1dp"
             android:scaleType="fitCenter"
             android:src="@drawable/covidlogo" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/restart"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayerChoice">
+
+        <Button
+            android:id="@+id/restartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/Restart"/>
 
 
     </RelativeLayout>
