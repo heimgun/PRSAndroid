@@ -30,8 +30,6 @@ public class StartGame extends AppCompatActivity {
 
 
 
-
-
     @Override
     public void onCreate(Bundle SavedInstance) {
         super.onCreate(SavedInstance);
@@ -59,7 +57,9 @@ public class StartGame extends AppCompatActivity {
 
         cpGenerator();
 
-
+        /**
+         * Player chooses Rock (Covid)
+         */
         rockBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +100,9 @@ public class StartGame extends AppCompatActivity {
             }
         });
 
+        /**
+         * Player Chooses Paper (Paper)
+         */
         paperBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -141,6 +144,9 @@ public class StartGame extends AppCompatActivity {
             }
         });
 
+        /**
+         * Player Chooses Scissors (Hand)
+         */
         scissorBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -190,7 +196,9 @@ public class StartGame extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Generates random number between 1 and 3 and makes it computers RPS
+     */
     public void cpGenerator(){
 
         int cp = generator.nextInt(3)+1;
@@ -211,7 +219,10 @@ public class StartGame extends AppCompatActivity {
     }
 
 
-
+    /**
+     * Enum RPS which creates objects ROCK (Covid), PAPER (Paper) and SCISSORS (Hand)
+     * and decides what beats what w/Boolean.
+     */
     public enum RPS {
 
         ROCK, PAPER, SCISSORS;

@@ -21,7 +21,7 @@ public class Rules extends AppCompatActivity {
             startGame = (ImageButton) findViewById(R.id.startGameBtnRules);
 
 
-
+            //Button
             startGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
