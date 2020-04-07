@@ -15,7 +15,7 @@ import java.sql.DriverManager;
 public class MainActivity extends AppCompatActivity {
 
 
-    ImageButton startGameBtn, rulesBtn;
+    ImageButton startGameBtn, rulesBtn, exitBtn;
 
 
     @Override
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         //Buttons
         startGameBtn = (ImageButton) findViewById(R.id.startGameBtn);
         rulesBtn = (ImageButton) findViewById(R.id.Rules);
+        exitBtn = (ImageButton) findViewById(R.id.Exit);
 
 
 
@@ -43,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Rules.class));
+            }
+        });
+
+        exitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                System.exit(0);
             }
         });
 

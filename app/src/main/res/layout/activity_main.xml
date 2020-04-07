@@ -25,24 +25,44 @@
         android:id="@+id/startGameBtn"
         android:layout_width="182dp"
         android:layout_height="84dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="16dp"
         android:adjustViewBounds="true"
         android:padding="1dp"
         android:scaleType="fitCenter"
         android:src="@drawable/startgamebutton"
         app:layout_constraintBottom_toTopOf="@+id/Rules"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImg" />
 
     <ImageButton
         android:id="@+id/Rules"
         android:layout_width="161dp"
         android:layout_height="68dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:padding="1dp"
         android:scaleType="fitCenter"
         android:src="@drawable/rulesbutton"
+        app:layout_constraintBottom_toTopOf="@+id/Exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startGameBtn" />
+
+    <ImageButton
+        android:id="@+id/Exit"
+        android:layout_width="139dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/exitbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Rules" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
