@@ -91,6 +91,7 @@ public class StartGame extends AppCompatActivity {
 
                     plGame.setVisibility(View.INVISIBLE);
                     gameTV.setText(R.string.Tie);
+                    computerMove.setImageResource(R.drawable.covidtie);
                     restart.setVisibility(View.VISIBLE);
 
 
@@ -177,6 +178,7 @@ public class StartGame extends AppCompatActivity {
 
                     plGame.setVisibility(View.INVISIBLE);
                     gameTV.setText(R.string.Tie);
+                    computerMove.setImageResource(R.drawable.handtie);
                     restart.setVisibility(View.VISIBLE);
 
                 }

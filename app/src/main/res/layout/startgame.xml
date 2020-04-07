@@ -124,12 +124,21 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/PlayerChoice">
 
-        <Button
+        <ImageButton
             android:id="@+id/restartBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="169dp"
+            android:layout_height="80dp"
             android:layout_centerInParent="true"
-            android:text="@string/Restart"/>
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/playagain"
+            app:layout_constraintBottom_toTopOf="@+id/Rules"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.525"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
 
     </RelativeLayout>
